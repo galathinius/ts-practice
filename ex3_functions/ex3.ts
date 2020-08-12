@@ -150,7 +150,9 @@ export default () => {
   const numberCollection: number[] = [];
   const stringCollection: string[] = [];
 
-  function pushToCollection<T>(item: T, collection: T[]): T[] {
+  function pushToCollection(item: string, collection: string[]): string[];
+  function pushToCollection(item: number, collection: number[]): number[];
+  function pushToCollection(item: any, collection: any): any {
     collection.push(item);
     return collection;
   }
